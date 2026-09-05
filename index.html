@@ -54,18 +54,9 @@
 
       <div class="wrap hero-content">
         <p class="eyebrow">one piece at a time</p>
-        <!-- INTENTIONAL SEMANTIC ISSUE: this looks like the page's main heading
-             but is a <p>, not an <h1>. The page now has no level-one heading at
-             all, which breaks WCAG 1.3.1 (Info and Relationships) and 2.4.6
-             (Headings and Labels) — screen reader users navigating by heading
-             structure won't find a heading here. -->
-        <p class="hero-heading">hand-made pottery</p>
+        <h1>hand-made pottery</h1>
         <p class="hero-copy">Every mug, bowl, and vase from Riverbend Studio is wheel-thrown, glazed, and fired by hand in our small workshop.</p>
-        <!-- INTENTIONAL SEMANTIC ISSUE: this looks and acts like a button but is
-             a <div> with an onclick handler — no role, no tabindex, no keyboard
-             handler. Keyboard and screen reader users cannot activate it, which
-             breaks WCAG 2.1.1 (Keyboard) and 4.1.2 (Name, Role, Value). -->
-        <div class="button button-primary" onclick="document.getElementById('collection').scrollIntoView({behavior: 'smooth'})">Browse the collection</div>
+        <a class="button button-primary" href="#collection" tabindex="1">Browse the collection</a>
       </div>
     </section>
 
